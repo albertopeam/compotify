@@ -1,2 +1,4 @@
 # compotify
 Demo player for Spotify open API using Swift+Combine
+
+WORK IN PROGRESS
