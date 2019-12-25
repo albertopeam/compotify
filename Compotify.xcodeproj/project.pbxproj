@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */; };
 		D364377623AFCD8E00C9877E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377523AFCD8E00C9877E /* AppDelegate.swift */; };
 		D364377823AFCD8E00C9877E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377723AFCD8E00C9877E /* SceneDelegate.swift */; };
 		D364377A23AFCD8E00C9877E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377923AFCD8E00C9877E /* ContentView.swift */; };
 		D364377C23AFCD8F00C9877E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364377B23AFCD8F00C9877E /* Assets.xcassets */; };
 		D364377F23AFCD8F00C9877E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364377E23AFCD8F00C9877E /* Preview Assets.xcassets */; };
 		D364378223AFCD8F00C9877E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364378023AFCD8F00C9877E /* LaunchScreen.storyboard */; };
+		D364379823AFD09700C9877E /* SpotifyCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = D364379723AFD09700C9877E /* SpotifyCredentials.plist */; };
+		D364379D23AFF55600C9877E /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364379C23AFF55600C9877E /* SecureStorage.swift */; };
+		D364379F23AFF5EA00C9877E /* CodableSecureStorage+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */; };
+		D36437A123AFF61C00C9877E /* CodableSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSecureStorageTests.swift; sourceTree = "<group>"; };
 		D364377223AFCD8E00C9877E /* Compotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364377523AFCD8E00C9877E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D364377723AFCD8E00C9877E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,10 @@
 		D364378323AFCD8F00C9877E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364378823AFCD8F00C9877E /* CompotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364378E23AFCD8F00C9877E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D364379723AFD09700C9877E /* SpotifyCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SpotifyCredentials.plist; sourceTree = "<group>"; };
+		D364379C23AFF55600C9877E /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecureStorage.swift; path = ../../../../fireblade/ShellFireblade/Common/Managers/Keychain/SecureStorage.swift; sourceTree = "<group>"; };
+		D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CodableSecureStorage+Token.swift"; sourceTree = "<group>"; };
+		D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableSecureStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D338EA4523B39A390071E675 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D364377B23AFCD8F00C9877E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D364376923AFCD8E00C9877E = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +95,12 @@
 		D364377423AFCD8E00C9877E /* Compotify */ = {
 			isa = PBXGroup;
 			children = (
+				D338EA4523B39A390071E675 /* Resources */,
+				D364379923AFD12B00C9877E /* SecureStorage */,
 				D364377523AFCD8E00C9877E /* AppDelegate.swift */,
+				D364379723AFD09700C9877E /* SpotifyCredentials.plist */,
 				D364377723AFCD8E00C9877E /* SceneDelegate.swift */,
 				D364377923AFCD8E00C9877E /* ContentView.swift */,
-				D364377B23AFCD8F00C9877E /* Assets.xcassets */,
 				D364378023AFCD8F00C9877E /* LaunchScreen.storyboard */,
 				D364378323AFCD8F00C9877E /* Info.plist */,
 				D364377D23AFCD8F00C9877E /* Preview Content */,
@@ -100,8 +120,19 @@
 			isa = PBXGroup;
 			children = (
 				D364378E23AFCD8F00C9877E /* Info.plist */,
+				D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */,
 			);
 			path = CompotifyTests;
+			sourceTree = "<group>";
+		};
+		D364379923AFD12B00C9877E /* SecureStorage */ = {
+			isa = PBXGroup;
+			children = (
+				D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */,
+				D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */,
+				D364379C23AFF55600C9877E /* SecureStorage.swift */,
+			);
+			path = SecureStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +188,7 @@
 					};
 					D364378723AFCD8F00C9877E = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = D364377123AFCD8E00C9877E;
 					};
 				};
@@ -187,6 +219,7 @@
 			files = (
 				D364378223AFCD8F00C9877E /* LaunchScreen.storyboard in Resources */,
 				D364377F23AFCD8F00C9877E /* Preview Assets.xcassets in Resources */,
+				D364379823AFD09700C9877E /* SpotifyCredentials.plist in Resources */,
 				D364377C23AFCD8F00C9877E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36437A123AFF61C00C9877E /* CodableSecureStorage.swift in Sources */,
+				D364379F23AFF5EA00C9877E /* CodableSecureStorage+Token.swift in Sources */,
 				D364377623AFCD8E00C9877E /* AppDelegate.swift in Sources */,
 				D364377823AFCD8E00C9877E /* SceneDelegate.swift in Sources */,
 				D364377A23AFCD8E00C9877E /* ContentView.swift in Sources */,
+				D364379D23AFF55600C9877E /* SecureStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +434,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompotifyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -407,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.albertopeam.CompotifyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Compotify.app/Compotify";
@@ -418,6 +457,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompotifyTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
