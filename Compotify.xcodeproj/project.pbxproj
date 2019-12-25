@@ -70,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				D364377B23AFCD8F00C9877E /* Assets.xcassets */,
+				D364378023AFCD8F00C9877E /* LaunchScreen.storyboard */,
+				D364378323AFCD8F00C9877E /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -101,8 +103,6 @@
 				D364379723AFD09700C9877E /* SpotifyCredentials.plist */,
 				D364377723AFCD8E00C9877E /* SceneDelegate.swift */,
 				D364377923AFCD8E00C9877E /* ContentView.swift */,
-				D364378023AFCD8F00C9877E /* LaunchScreen.storyboard */,
-				D364378323AFCD8F00C9877E /* Info.plist */,
 				D364377D23AFCD8F00C9877E /* Preview Content */,
 			);
 			path = Compotify;
@@ -398,7 +398,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Compotify/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Compotify/Info.plist;
+				INFOPLIST_FILE = Compotify/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +417,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Compotify/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Compotify/Info.plist;
+				INFOPLIST_FILE = Compotify/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
