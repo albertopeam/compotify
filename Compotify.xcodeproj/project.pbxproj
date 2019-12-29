@@ -9,15 +9,27 @@
 /* Begin PBXBuildFile section */
 		D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */; };
 		D338EA4A23B3EAA30071E675 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338EA4923B3EAA30071E675 /* SecureStorage.swift */; };
+		D33DD77C23B3ECF400A01191 /* AuthenticationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */; };
+		D33DD77E23B3EDCB00A01191 /* RequestsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */; };
+		D33DD78223B3EE8300A01191 /* CredentialsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78123B3EE8300A01191 /* CredentialsAdapter.swift */; };
+		D33DD78623B3F08200A01191 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78523B3F08200A01191 /* Authentication.swift */; };
+		D33DD78A23B3F49700A01191 /* RequestsPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78923B3F49700A01191 /* RequestsPort.swift */; };
+		D33DD78C23B3F64700A01191 /* CredentialsPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78B23B3F64700A01191 /* CredentialsPort.swift */; };
+		D33DD78E23B3F9A100A01191 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78D23B3F9A100A01191 /* Injector.swift */; };
+		D33DD79023B4173F00A01191 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD78F23B4173F00A01191 /* AuthenticationView.swift */; };
 		D364377623AFCD8E00C9877E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377523AFCD8E00C9877E /* AppDelegate.swift */; };
 		D364377823AFCD8E00C9877E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377723AFCD8E00C9877E /* SceneDelegate.swift */; };
-		D364377A23AFCD8E00C9877E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377923AFCD8E00C9877E /* ContentView.swift */; };
+		D364377A23AFCD8E00C9877E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364377923AFCD8E00C9877E /* DashboardView.swift */; };
 		D364377C23AFCD8F00C9877E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364377B23AFCD8F00C9877E /* Assets.xcassets */; };
 		D364377F23AFCD8F00C9877E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D364377E23AFCD8F00C9877E /* Preview Assets.xcassets */; };
 		D364378223AFCD8F00C9877E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D364378023AFCD8F00C9877E /* LaunchScreen.storyboard */; };
 		D364379823AFD09700C9877E /* SpotifyCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = D364379723AFD09700C9877E /* SpotifyCredentials.plist */; };
-		D364379F23AFF5EA00C9877E /* CodableSecureStorage+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */; };
+		D364379F23AFF5EA00C9877E /* AuthenticationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364379E23AFF5EA00C9877E /* AuthenticationAdapter.swift */; };
 		D36437A123AFF61C00C9877E /* CodableSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */; };
+		D37699F323B52DCC00AE2706 /* SpinnnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F223B52DCC00AE2706 /* SpinnnerView.swift */; };
+		D37699F523B5300900AE2706 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F423B5300900AE2706 /* WebView.swift */; };
+		D37699F723B5313C00AE2706 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */; };
+		D37699FA23B5346400AE2706 /* AuthenticationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +45,18 @@
 /* Begin PBXFileReference section */
 		D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSecureStorageTests.swift; sourceTree = "<group>"; };
 		D338EA4923B3EAA30071E675 /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
+		D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPort.swift; sourceTree = "<group>"; };
+		D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsAdapter.swift; sourceTree = "<group>"; };
+		D33DD78123B3EE8300A01191 /* CredentialsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsAdapter.swift; sourceTree = "<group>"; };
+		D33DD78523B3F08200A01191 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		D33DD78923B3F49700A01191 /* RequestsPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsPort.swift; sourceTree = "<group>"; };
+		D33DD78B23B3F64700A01191 /* CredentialsPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPort.swift; sourceTree = "<group>"; };
+		D33DD78D23B3F9A100A01191 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		D33DD78F23B4173F00A01191 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		D364377223AFCD8E00C9877E /* Compotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364377523AFCD8E00C9877E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D364377723AFCD8E00C9877E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D364377923AFCD8E00C9877E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D364377923AFCD8E00C9877E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		D364377B23AFCD8F00C9877E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D364377E23AFCD8F00C9877E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D364378123AFCD8F00C9877E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,8 +64,12 @@
 		D364378823AFCD8F00C9877E /* CompotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D364378E23AFCD8F00C9877E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D364379723AFD09700C9877E /* SpotifyCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SpotifyCredentials.plist; sourceTree = "<group>"; };
-		D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CodableSecureStorage+Token.swift"; sourceTree = "<group>"; };
+		D364379E23AFF5EA00C9877E /* AuthenticationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAdapter.swift; sourceTree = "<group>"; };
 		D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableSecureStorage.swift; sourceTree = "<group>"; };
+		D37699F223B52DCC00AE2706 /* SpinnnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnnerView.swift; sourceTree = "<group>"; };
+		D37699F423B5300900AE2706 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D32B040E23B7E40500BF4EFE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D364377923AFCD8E00C9877E /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		D338EA4523B39A390071E675 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,8 +112,10 @@
 		D338EA4B23B3EAB40071E675 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D33DD79323B418C100A01191 /* Ports */,
 				D338EA4F23B3EB880071E675 /* Dashboard */,
 				D338EA4E23B3EB7B0071E675 /* Authentication */,
+				D33DD78D23B3F9A100A01191 /* Injector.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -89,10 +123,10 @@
 		D338EA4C23B3EB4C0071E675 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				D33DD77F23B3EE7100A01191 /* Storage */,
 				D338EA5123B3EBA30071E675 /* iOS */,
 				D338EA5023B3EB950071E675 /* Network */,
 				D338EA4D23B3EB630071E675 /* UserInterface */,
-				D364379923AFD12B00C9877E /* SecureStorage */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -100,7 +134,9 @@
 		D338EA4D23B3EB630071E675 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				D364377923AFCD8E00C9877E /* ContentView.swift */,
+				D32B040E23B7E40500BF4EFE /* Dashboard */,
+				D37699F823B5344E00AE2706 /* Authentication */,
+				D37699F223B52DCC00AE2706 /* SpinnnerView.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -108,6 +144,9 @@
 		D338EA4E23B3EB7B0071E675 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D33DD78523B3F08200A01191 /* Authentication.swift */,
+				D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */,
+				D33DD78B23B3F64700A01191 /* CredentialsPort.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -122,6 +161,7 @@
 		D338EA5023B3EB950071E675 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -138,7 +178,7 @@
 		D338EA5223B3EBF20071E675 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				D338EA5323B3EC080071E675 /* SecureStorage */,
+				D33DD78323B3EEA300A01191 /* Storage */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -149,6 +189,47 @@
 				D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */,
 			);
 			path = SecureStorage;
+			sourceTree = "<group>";
+		};
+		D33DD77F23B3EE7100A01191 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D33DD78023B3EE7A00A01191 /* Credentials */,
+				D364379923AFD12B00C9877E /* SecureStorage */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D33DD78023B3EE7A00A01191 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				D33DD78123B3EE8300A01191 /* CredentialsAdapter.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		D33DD78323B3EEA300A01191 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				D33DD78423B3EEAB00A01191 /* Credentials */,
+				D338EA5323B3EC080071E675 /* SecureStorage */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		D33DD78423B3EEAB00A01191 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		D33DD79323B418C100A01191 /* Ports */ = {
+			isa = PBXGroup;
+			children = (
+				D33DD78923B3F49700A01191 /* RequestsPort.swift */,
+			);
+			path = Ports;
 			sourceTree = "<group>";
 		};
 		D364376923AFCD8E00C9877E = {
@@ -200,11 +281,22 @@
 		D364379923AFD12B00C9877E /* SecureStorage */ = {
 			isa = PBXGroup;
 			children = (
-				D338EA4923B3EAA30071E675 /* SecureStorage.swift */,
-				D364379E23AFF5EA00C9877E /* CodableSecureStorage+Token.swift */,
 				D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */,
+				D338EA4923B3EAA30071E675 /* SecureStorage.swift */,
+				D364379E23AFF5EA00C9877E /* AuthenticationAdapter.swift */,
 			);
 			path = SecureStorage;
+			sourceTree = "<group>";
+		};
+		D37699F823B5344E00AE2706 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D33DD78F23B4173F00A01191 /* AuthenticationView.swift */,
+				D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */,
+				D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */,
+				D37699F423B5300900AE2706 /* WebView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,12 +402,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33DD77C23B3ECF400A01191 /* AuthenticationPort.swift in Sources */,
 				D338EA4A23B3EAA30071E675 /* SecureStorage.swift in Sources */,
+				D37699FA23B5346400AE2706 /* AuthenticationAssembler.swift in Sources */,
+				D33DD77E23B3EDCB00A01191 /* RequestsAdapter.swift in Sources */,
+				D33DD78C23B3F64700A01191 /* CredentialsPort.swift in Sources */,
+				D37699F323B52DCC00AE2706 /* SpinnnerView.swift in Sources */,
+				D37699F723B5313C00AE2706 /* AuthenticationViewModel.swift in Sources */,
+				D33DD78E23B3F9A100A01191 /* Injector.swift in Sources */,
+				D33DD78623B3F08200A01191 /* Authentication.swift in Sources */,
+				D33DD78223B3EE8300A01191 /* CredentialsAdapter.swift in Sources */,
+				D33DD78A23B3F49700A01191 /* RequestsPort.swift in Sources */,
 				D36437A123AFF61C00C9877E /* CodableSecureStorage.swift in Sources */,
-				D364379F23AFF5EA00C9877E /* CodableSecureStorage+Token.swift in Sources */,
+				D37699F523B5300900AE2706 /* WebView.swift in Sources */,
+				D364379F23AFF5EA00C9877E /* AuthenticationAdapter.swift in Sources */,
+				D33DD79023B4173F00A01191 /* AuthenticationView.swift in Sources */,
 				D364377623AFCD8E00C9877E /* AppDelegate.swift in Sources */,
 				D364377823AFCD8E00C9877E /* SceneDelegate.swift in Sources */,
-				D364377A23AFCD8E00C9877E /* ContentView.swift in Sources */,
+				D364377A23AFCD8E00C9877E /* DashboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
