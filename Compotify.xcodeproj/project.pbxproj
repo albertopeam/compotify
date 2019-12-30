@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */; };
+		D32430D123B94B250049EBF0 /* CredentialsAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430D023B94B250049EBF0 /* CredentialsAdapterTests.swift */; };
+		D32430D423B9F43E0049EBF0 /* RequestsAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430D323B9F43E0049EBF0 /* RequestsAdapterTests.swift */; };
+		D32430D823B9F7160049EBF0 /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430D723B9F7160049EBF0 /* AuthenticationTests.swift */; };
+		D32430DC23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430DB23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift */; };
+		D32430DE23B9FDE70049EBF0 /* RequestsPortDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */; };
+		D32430E023B9FE050049EBF0 /* CredentialsPortDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */; };
+		D32430E223B9FEC80049EBF0 /* AuthenticationDummyPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */; };
 		D338EA4A23B3EAA30071E675 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338EA4923B3EAA30071E675 /* SecureStorage.swift */; };
 		D33DD77C23B3ECF400A01191 /* AuthenticationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */; };
 		D33DD77E23B3EDCB00A01191 /* RequestsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */; };
@@ -44,6 +51,13 @@
 
 /* Begin PBXFileReference section */
 		D308979B23B2A25400126F50 /* CodableSecureStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableSecureStorageTests.swift; sourceTree = "<group>"; };
+		D32430D023B94B250049EBF0 /* CredentialsAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsAdapterTests.swift; sourceTree = "<group>"; };
+		D32430D323B9F43E0049EBF0 /* RequestsAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsAdapterTests.swift; sourceTree = "<group>"; };
+		D32430D723B9F7160049EBF0 /* AuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTests.swift; sourceTree = "<group>"; };
+		D32430DB23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
+		D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsPortDummy.swift; sourceTree = "<group>"; };
+		D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPortDummy.swift; sourceTree = "<group>"; };
+		D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDummyPort.swift; sourceTree = "<group>"; };
 		D338EA4923B3EAA30071E675 /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 		D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPort.swift; sourceTree = "<group>"; };
 		D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsAdapter.swift; sourceTree = "<group>"; };
@@ -90,6 +104,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D32430D223B9F4320049EBF0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D32430D323B9F43E0049EBF0 /* RequestsAdapterTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D32430D523B9F6BD0049EBF0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D32430D623B9F6C60049EBF0 /* Authentication */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D32430D623B9F6C60049EBF0 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D32430D723B9F7160049EBF0 /* AuthenticationTests.swift */,
+				D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */,
+				D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */,
+				D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D32430D923B9FBDE0049EBF0 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				D32430DA23B9FBE30049EBF0 /* Authentication */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		D32430DA23B9FBE30049EBF0 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D32430DB23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		D32B040E23B7E40500BF4EFE /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +166,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D338EA4B23B3EAB40071E675 /* App */ = {
+		D338EA4B23B3EAB40071E675 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				D33DD79323B418C100A01191 /* Ports */,
@@ -117,7 +174,7 @@
 				D338EA4E23B3EB7B0071E675 /* Authentication */,
 				D33DD78D23B3F9A100A01191 /* Injector.swift */,
 			);
-			path = App;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D338EA4C23B3EB4C0071E675 /* Adapters */ = {
@@ -178,7 +235,9 @@
 		D338EA5223B3EBF20071E675 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				D32430D223B9F4320049EBF0 /* Network */,
 				D33DD78323B3EEA300A01191 /* Storage */,
+				D32430D923B9FBDE0049EBF0 /* UserInterface */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -220,6 +279,7 @@
 		D33DD78423B3EEAB00A01191 /* Credentials */ = {
 			isa = PBXGroup;
 			children = (
+				D32430D023B94B250049EBF0 /* CredentialsAdapterTests.swift */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -254,7 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				D338EA4C23B3EB4C0071E675 /* Adapters */,
-				D338EA4B23B3EAB40071E675 /* App */,
+				D338EA4B23B3EAB40071E675 /* Core */,
 				D338EA4523B39A390071E675 /* Resources */,
 				D364379723AFD09700C9877E /* SpotifyCredentials.plist */,
 			);
@@ -273,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				D338EA5223B3EBF20071E675 /* Adapters */,
+				D32430D523B9F6BD0049EBF0 /* Core */,
 				D364378E23AFCD8F00C9877E /* Info.plist */,
 			);
 			path = CompotifyTests;
@@ -427,7 +488,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32430D423B9F43E0049EBF0 /* RequestsAdapterTests.swift in Sources */,
+				D32430E223B9FEC80049EBF0 /* AuthenticationDummyPort.swift in Sources */,
+				D32430D123B94B250049EBF0 /* CredentialsAdapterTests.swift in Sources */,
 				D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */,
+				D32430DE23B9FDE70049EBF0 /* RequestsPortDummy.swift in Sources */,
+				D32430D823B9F7160049EBF0 /* AuthenticationTests.swift in Sources */,
+				D32430E023B9FE050049EBF0 /* CredentialsPortDummy.swift in Sources */,
+				D32430DC23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,12 +17,9 @@ struct AuthenticationView: View {
     }
 
     var body: some View {
-        switch viewModel.state {
-        case .load(let request):
-            return ZStack {
-                WebView(isLoading: $isLoading, urlPublisher: viewModel.urlPublisher, request: request)
-                SpinnnerView(isAnimating: $isLoading)
-            }
+        ZStack {
+            WebView(isLoading: $isLoading, urlPublisher: viewModel.urlPublisher, request: viewModel.authRequest)
+            SpinnnerView(isAnimating: $isLoading)
         }
     }
 }
