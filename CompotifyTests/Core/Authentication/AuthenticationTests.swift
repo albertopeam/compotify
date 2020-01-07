@@ -47,6 +47,12 @@ class AuthenticationTests: XCTestCase {
         XCTAssertEqual(authPortSpy.spiedToken, "demo")
     }
 
+    func testGivenSessionWhenLogoutThenMatchNoSession() {
+        sut.logout()
+
+        XCTAssertNil(authPortSpy.spiedToken)
+    }
+
 }
 
 private class AuthenticationPortSpy: AuthenticationPort {

@@ -26,6 +26,10 @@ class Authentication {
         return authPort.token
     }
 
+    func logout() {
+        authPort.token = nil
+    }
+
     var authenticationRequest: URLRequest { requestsPort.authentication(credentialsPort.credentials) }
 
     var publisher: AnyPublisher<String?, Never> {
@@ -39,6 +43,7 @@ class Authentication {
                 .map({ $0.replacingOccurrences(of: "access_token=", with: "") })
                 .first {
                 authPort.token = accessToken
+                print(accessToken) //TODO: remove, only debugging purposes
                 return true
             }
         }

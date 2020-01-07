@@ -15,7 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     private var subscriptions: Set<AnyCancellable> = .init()
     //TODO: DI -> Singleton...
-    private let authentication: Authentication = AuthenticationAssembler.assembleAuthentication()
+    //TODO: back to private and use injection
+    let authentication: Authentication = AuthenticationAssembler.assembleAuthentication()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard NSClassFromString("XCTestCase") == nil else {

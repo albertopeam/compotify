@@ -13,7 +13,7 @@ struct DashboardView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
+            DemoView()
                 .font(.title)
                 .tabItem {
                     VStack {
@@ -22,16 +22,33 @@ struct DashboardView: View {
                     }
                 }
                 .tag(0)
-            Text("Second View")
+            ProfileView()
                 .font(.title)
                 .tabItem {
                     VStack {
                         Image("second")
-                        Text("Second")
+                        Text("Profile")
                     }
                 }
                 .tag(1)
         }
+    }
+}
+
+struct DemoView: View {
+    var body: some View {
+        Text("First View")
+    }
+}
+
+struct ProfileView: View {
+    //TODO: remove from here
+    private let authentication = (UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate).authentication
+
+    var body: some View {
+        Button(action: {
+            self.authentication.logout()
+        }, label: { Text("Logout") })
     }
 }
 
