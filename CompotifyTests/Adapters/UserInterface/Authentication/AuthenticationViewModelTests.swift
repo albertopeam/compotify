@@ -33,23 +33,3 @@ class AuthenticationViewModelTests: XCTestCase {
     }
 
 }
-
-private class AuthenticationMock: Authentication {
-    var authRequest: URLRequest!
-    var invokedAuthenticate: Bool!
-
-    init() {
-        super.init(authPort: AuthenticationDummyPort(),
-                   credentialsPort: CredentialsPortDummy(),
-                   requestsPort: RequestsPortDummy())
-    }
-
-    override var authenticationRequest: URLRequest { URLRequest(url: URL(string: "some")!) }
-
-    override func authenticate(url: URL) -> Bool {
-        invokedAuthenticate = true
-        return false
-    }
-}
-
-

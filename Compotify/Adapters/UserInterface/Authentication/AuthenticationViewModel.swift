@@ -12,11 +12,12 @@ import Combine
 class AuthenticationViewModel: ObservableObject {
     private let authentication: Authentication
     private var subscriptions: Set<AnyCancellable> = .init()
-    let urlPublisher: PassthroughSubject<URL, Never> = .init()
+    let urlPublisher: PassthroughSubject<URL, Never>
     var authRequest: URLRequest { authentication.authenticationRequest }
 
-    init(authentication: Authentication) {
+    init(authentication: Authentication, urlPublisher: PassthroughSubject<URL, Never> = .init()) {
         self.authentication = authentication
+        self.urlPublisher = urlPublisher
         urlPublisher
             .map({ authentication.authenticate(url: $0) })
             .sink(receiveValue: { _ in })

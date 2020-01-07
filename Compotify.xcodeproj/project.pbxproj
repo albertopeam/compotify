@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		D32430DE23B9FDE70049EBF0 /* RequestsPortDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */; };
 		D32430E023B9FE050049EBF0 /* CredentialsPortDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */; };
 		D32430E223B9FEC80049EBF0 /* AuthenticationDummyPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */; };
+		D32430E823BA2A5F0049EBF0 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = D32430E723BA2A5F0049EBF0 /* ViewInspector */; };
+		D32430EA23BA2A870049EBF0 /* AuthenticationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430E923BA2A870049EBF0 /* AuthenticationViewTests.swift */; };
+		D32430EC23BA2C650049EBF0 /* AuthenticationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32430EB23BA2C650049EBF0 /* AuthenticationMock.swift */; };
 		D338EA4A23B3EAA30071E675 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338EA4923B3EAA30071E675 /* SecureStorage.swift */; };
 		D33DD77C23B3ECF400A01191 /* AuthenticationPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */; };
 		D33DD77E23B3EDCB00A01191 /* RequestsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */; };
@@ -58,6 +61,8 @@
 		D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsPortDummy.swift; sourceTree = "<group>"; };
 		D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPortDummy.swift; sourceTree = "<group>"; };
 		D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDummyPort.swift; sourceTree = "<group>"; };
+		D32430E923BA2A870049EBF0 /* AuthenticationViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewTests.swift; sourceTree = "<group>"; };
+		D32430EB23BA2C650049EBF0 /* AuthenticationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMock.swift; sourceTree = "<group>"; };
 		D338EA4923B3EAA30071E675 /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 		D33DD77B23B3ECF400A01191 /* AuthenticationPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationPort.swift; sourceTree = "<group>"; };
 		D33DD77D23B3EDCB00A01191 /* RequestsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsAdapter.swift; sourceTree = "<group>"; };
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32430E823BA2A5F0049EBF0 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +133,7 @@
 				D32430DD23B9FDE70049EBF0 /* RequestsPortDummy.swift */,
 				D32430DF23B9FE050049EBF0 /* CredentialsPortDummy.swift */,
 				D32430E123B9FEC80049EBF0 /* AuthenticationDummyPort.swift */,
+				D32430EB23BA2C650049EBF0 /* AuthenticationMock.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D32430DB23B9FBF30049EBF0 /* AuthenticationViewModelTests.swift */,
+				D32430E923BA2A870049EBF0 /* AuthenticationViewTests.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -394,6 +402,9 @@
 				D364378A23AFCD8F00C9877E /* PBXTargetDependency */,
 			);
 			name = CompotifyTests;
+			packageProductDependencies = (
+				D32430E723BA2A5F0049EBF0 /* ViewInspector */,
+			);
 			productName = CompotifyTests;
 			productReference = D364378823AFCD8F00C9877E /* CompotifyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -427,6 +438,9 @@
 				Base,
 			);
 			mainGroup = D364376923AFCD8E00C9877E;
+			packageReferences = (
+				D32430E623BA2A5F0049EBF0 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = D364377323AFCD8E00C9877E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -492,6 +506,8 @@
 				D32430E223B9FEC80049EBF0 /* AuthenticationDummyPort.swift in Sources */,
 				D32430D123B94B250049EBF0 /* CredentialsAdapterTests.swift in Sources */,
 				D308979C23B2A25400126F50 /* CodableSecureStorageTests.swift in Sources */,
+				D32430EA23BA2A870049EBF0 /* AuthenticationViewTests.swift in Sources */,
+				D32430EC23BA2C650049EBF0 /* AuthenticationMock.swift in Sources */,
 				D32430DE23B9FDE70049EBF0 /* RequestsPortDummy.swift in Sources */,
 				D32430D823B9F7160049EBF0 /* AuthenticationTests.swift in Sources */,
 				D32430E023B9FE050049EBF0 /* CredentialsPortDummy.swift in Sources */,
@@ -749,6 +765,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D32430E623BA2A5F0049EBF0 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D32430E723BA2A5F0049EBF0 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D32430E623BA2A5F0049EBF0 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D364376A23AFCD8E00C9877E /* Project object */;
 }
