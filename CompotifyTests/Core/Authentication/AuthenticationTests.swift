@@ -20,7 +20,7 @@ class AuthenticationTests: XCTestCase {
         authPortSpy = AuthenticationPortSpy()
         sut = Authentication(authPort: authPortSpy,
                              credentialsPort: CredentialsPortDummy(),
-                             requestsPort: RequestsPortDummy())
+                             networkPort: NetworkPortDummy())
     }
 
     override func tearDown() {

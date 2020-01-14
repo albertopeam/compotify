@@ -1,5 +1,5 @@
 //
-//  RequestsPort.swift
+//  NetworkPort.swift
 //  Compotify
 //
 //  Created by Alberto Penas Amor on 25/12/2019.
@@ -9,6 +9,6 @@
 import Foundation
 
 //TODO: maybe is not a port...SpotifyApiPort
-protocol RequestsPort {
+protocol NetworkPort {
     func authentication(_ credentials: (clientId: String, redirectUri: String)) -> URLRequest
 }

@@ -9,7 +9,7 @@
 @testable import Compotify
 import Foundation
 
-class RequestsPortDummy: RequestsPort {
+class NetworkPortDummy: NetworkPort {
     func authentication(_ credentials: (clientId: String, redirectUri: String)) -> URLRequest {
         fatalError()
     }

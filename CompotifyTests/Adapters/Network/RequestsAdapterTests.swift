@@ -12,7 +12,7 @@ import XCTest
 class RequestsAdapterTests: XCTestCase {
 
     func testGivenAuthRequestWhenGetMatchUrlAndPathAndParams() throws {
-        let sut = RequestsAdapter()
+        let sut = NetworkAdapter()
         let request = sut.authentication((clientId: "id", redirectUri: "uri"))
         XCTAssertEqual(request.httpMethod, "GET")
         let url = try XCTUnwrap(request.url)

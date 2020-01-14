@@ -12,14 +12,14 @@ import Combine
 class Authentication {
     private var authPort: AuthenticationPort
     private let credentialsPort: CredentialsPort
-    private let requestsPort: RequestsPort
+    private let networkPort: NetworkPort
 
     init(authPort: AuthenticationPort,
          credentialsPort: CredentialsPort,
-         requestsPort: RequestsPort) {
+         networkPort: NetworkPort) {
         self.authPort = authPort
         self.credentialsPort = credentialsPort
-        self.requestsPort = requestsPort
+        self.networkPort = networkPort
     }
 
     var token: String? {
@@ -30,7 +30,7 @@ class Authentication {
         authPort.token = nil
     }
 
-    var authenticationRequest: URLRequest { requestsPort.authentication(credentialsPort.credentials) }
+    var authenticationRequest: URLRequest { networkPort.authentication(credentialsPort.credentials) }
 
     var publisher: AnyPublisher<String?, Never> {
         return authPort.publisher

@@ -16,7 +16,7 @@ class AuthenticationMock: Authentication {
     init() {
         super.init(authPort: AuthenticationDummyPort(),
                    credentialsPort: CredentialsPortDummy(),
-                   requestsPort: RequestsPortDummy())
+                   networkPort: NetworkPortDummy())
     }
 
     override var authenticationRequest: URLRequest { URLRequest(url: URL(string: "some")!) }

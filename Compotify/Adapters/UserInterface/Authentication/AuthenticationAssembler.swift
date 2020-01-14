@@ -13,7 +13,7 @@ class AuthenticationAssembler {
     static func assembleAuthentication() -> Authentication {
         return Authentication(authPort: AuthenticationAdapter(),
                               credentialsPort: CredentialsAdapter(),
-                              requestsPort: RequestsAdapter())
+                              networkPort: NetworkAdapter())
     }
 
     static func assemble(authentication: Authentication) -> AuthenticationView {
