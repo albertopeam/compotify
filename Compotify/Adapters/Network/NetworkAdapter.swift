@@ -58,7 +58,14 @@ class NetworkAdapter: NetworkPort {
     // MARK: - artists
 
     private func mapArtists(_ input: [ArtistsResponse.Artist]) -> [Artist] {
-        return input.map({ Artist(id: $0.id, name: $0.name, followers: $0.followers.total, genres: $0.genres, image: URL(string: $0.images.first?.url) ?? nil, popularity: $0.popularity) })
+        return input.map({ Artist(id: $0.id, name: $0.name, followers: $0.followers.total, genres: $0.genres, image: mapImage($0.images), popularity: $0.popularity) })
+    }
+
+    private func mapImage(_ input: [Image]) -> URL? {
+        if input.count > 1 {
+            return URL(string: input.dropFirst().first?.url)
+        }
+        return URL(string: input.first?.url)
     }
 
     // MARK: private
@@ -113,9 +120,10 @@ private struct ArtistsResponse: Decodable {
     struct Followers: Decodable {
         let total: Int
     }
-    struct Image: Decodable {
-        let height: Int
-        let url: String
-        let width: Int
-    }
+}
+
+private struct Image: Decodable {
+    let height: Int
+    let url: String
+    let width: Int
 }

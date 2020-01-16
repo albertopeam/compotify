@@ -17,33 +17,24 @@ struct TopView: View {
     
     var body: some View {
         NavigationView {
-            //TODO: horizontal...
-            List {
-                ForEach(viewModel.items) { item in
-                    Text(item.name)
-                    KFImage(item.image) // image is not loading
-                        .resizable()
-                        .frame(width: 128, height: 128)
-                        .cornerRadius(20)
-                        .shadow(radius: 5)
-                }
-                /*ScrollView(.horizontal, content: {
-                    HStack(spacing: 10) {
-                        ForEach(viewModel.items) { item in
+            ScrollView (.horizontal, showsIndicators: false) {
+                 HStack {
+                     ForEach(viewModel.items) { item in
+                        VStack {
                             Text(item.name)
                             KFImage(item.image)
                                 .resizable()
-                                .frame(width: 128, height: 128)
-                                .cornerRadius(20)
-                                .shadow(radius: 5)
+                                .placeholder {
+                                        Image(systemName: "arrow.2.circlepath.circle")
+                                        .font(.largeTitle)
+                                        .opacity(0.3)
+                                }
+                                .frame(width: 280, height: 280)
                         }
-                    }
-                    .padding(.leading, 10)
-                })
-                .frame(height: 190)*/
+                     }
+                 }
             }
-            .padding(.leading, -20)
-            .padding(.trailing, -20)
+            Spacer()
         }.onAppear(perform: { self.viewModel.get() })
         //TODO: think what todo next
         //artists & tracks???

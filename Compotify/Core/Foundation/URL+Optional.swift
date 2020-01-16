@@ -12,6 +12,7 @@ extension URL {
     init?(string: String?) {
         if let string = string {
             self.init(string: string)
+            return
         }
         return nil
     }
