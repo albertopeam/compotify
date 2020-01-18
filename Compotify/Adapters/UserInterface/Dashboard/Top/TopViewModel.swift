@@ -9,7 +9,6 @@
 import Foundation
 import Combine
 
-//TODO: move out of here
 class TopViewModel: ObservableObject {
     enum State: Equatable {
         case initial
@@ -31,8 +30,8 @@ class TopViewModel: ObservableObject {
     private let authPort: AuthenticationPort = AuthenticationAdapter()
     private var subscriptions = Set<AnyCancellable>()
 
-    init() {
-        self.state = .initial
+    init(state: State = .initial) {
+        self.state = state
     }
 
     func get() {
@@ -43,7 +42,7 @@ class TopViewModel: ObservableObject {
             .sink(receiveCompletion: {
                 switch $0 {
                     case .finished: break
-                    case .failure(_): self.state = .error //TODO: handle 401
+                    case .failure(_): self.state = .error //TODO: handle 401 in usecase,,,
                 }
             }, receiveValue: { self.state = .success($0) })
             .store(in: &subscriptions)

@@ -13,7 +13,7 @@ struct DashboardView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            TopView()
+            TopView(viewModel: .init())
                 .font(.title)
                 .tabItem {
                     VStack {
