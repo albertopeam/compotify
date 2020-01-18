@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArtistDecorator: Identifiable {
+struct ArtistDecorator: Identifiable, Equatable {
     let id: String
     let name: String
     let genres: String

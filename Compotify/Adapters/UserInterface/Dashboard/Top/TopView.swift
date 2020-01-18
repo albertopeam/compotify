@@ -8,34 +8,24 @@
 
 import SwiftUI
 import Combine
-import KingfisherSwiftUI
 
+//TODO: refresh if error o needed
 struct TopView: View {
 
     //TODO: make injections
     @ObservedObject var viewModel: TopViewModel = .init()
-    
+
     var body: some View {
-        NavigationView {
-            ScrollView (.horizontal, showsIndicators: false) {
-                 HStack {
-                     ForEach(viewModel.items) { item in
-                        VStack {
-                            Text(item.name)
-                            KFImage(item.image)
-                                .resizable()
-                                .placeholder {
-                                        Image(systemName: "arrow.2.circlepath.circle")
-                                        .font(.largeTitle)
-                                        .opacity(0.3)
-                                }
-                                .frame(width: 280, height: 280)
-                        }
-                     }
-                 }
-            }
-            Spacer()
-        }.onAppear(perform: { self.viewModel.get() })
+        switch viewModel.state {
+        case .initial:
+            return initial
+        case .loading:
+            return loading
+        case let .success(items):
+            return success(items)
+        case .error:
+            return error
+        }
         //TODO: think what todo next
         //artists & tracks???
         //start with artists?
@@ -46,26 +36,35 @@ struct TopView: View {
         // albums for artist https://developer.spotify.com/documentation/web-api/reference/artists/get-artists-albums/
         // related artists https://developer.spotify.com/documentation/web-api/reference/artists/get-related-artists/
     }
-}
 
-//TODO: move out of here
-class TopViewModel: ObservableObject {
-    @Published var items: [ArtistDecorator] = .init()
-    private let networkAdapter: NetworkAdapter = .init()
-    private let authPort: AuthenticationPort = AuthenticationAdapter()
-    private var subscriptions = Set<AnyCancellable>()
-
-    init() {
-        //TODO: move injections to here
+    private var initial: AnyView {
+        AnyView(Text("").onAppear(perform: { self.viewModel.get() }))
     }
 
-    func get() {
-        networkAdapter.myTopArtists(token: authPort.token)
-        .map({ $0.map({ ArtistDecorator($0) }) })
-        .receive(on: RunLoop.main)
-        .sink(receiveCompletion: { print($0) }, //TODO: handle 401
-              receiveValue: { self.items = $0 })
-        .store(in: &subscriptions)
+    private var loading: AnyView {
+        AnyView(SpinnnerView())
+    }
+
+    private func success(_ items: [ArtistDecorator]) -> AnyView {
+        AnyView(
+            NavigationView {
+                ScrollView(.horizontal, showsIndicators: false) {
+                     HStack {
+                        ForEach(items) { item in
+                            VStack {
+                                Text(item.name)                            
+                                URLImage(url: item.image)
+                                    .frame(width: CGFloat(320), height: CGFloat(320))
+                            }
+                         }
+                     }
+                }
+            }
+        )
+    }
+
+    private var error: AnyView {
+        AnyView(Text("Something went wrong..."))
     }
 }
 

@@ -37,7 +37,7 @@
 		D364379823AFD09700C9877E /* SpotifyCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = D364379723AFD09700C9877E /* SpotifyCredentials.plist */; };
 		D364379F23AFF5EA00C9877E /* AuthenticationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364379E23AFF5EA00C9877E /* AuthenticationAdapter.swift */; };
 		D36437A123AFF61C00C9877E /* CodableSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */; };
-		D37699F323B52DCC00AE2706 /* SpinnnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F223B52DCC00AE2706 /* SpinnnerView.swift */; };
+		D37699F323B52DCC00AE2706 /* AuthenticationSpinnnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F223B52DCC00AE2706 /* AuthenticationSpinnnerView.swift */; };
 		D37699F523B5300900AE2706 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F423B5300900AE2706 /* WebView.swift */; };
 		D37699F723B5313C00AE2706 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */; };
 		D37699FA23B5346400AE2706 /* AuthenticationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */; };
@@ -48,6 +48,9 @@
 		D3EBE3D923CFC14100CA923D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3EBE3D823CFC14100CA923D /* KingfisherSwiftUI */; };
 		D3EBE3DB23CFC14100CA923D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D3EBE3DA23CFC14100CA923D /* Kingfisher */; };
 		D3EBE3DE23CFC33200CA923D /* ArtistDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EBE3DD23CFC33200CA923D /* ArtistDecorator.swift */; };
+		D3FABAE623D2F6B80092196A /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FABAE523D2F6B80092196A /* SpinnerView.swift */; };
+		D3FABAE923D2FDA50092196A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FABAE823D2FDA50092196A /* URLImage.swift */; };
+		D3FABAEB23D2FE990092196A /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FABAEA23D2FE990092196A /* TopViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,7 @@
 		D364379723AFD09700C9877E /* SpotifyCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SpotifyCredentials.plist; sourceTree = "<group>"; };
 		D364379E23AFF5EA00C9877E /* AuthenticationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationAdapter.swift; sourceTree = "<group>"; };
 		D36437A023AFF61C00C9877E /* CodableSecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableSecureStorage.swift; sourceTree = "<group>"; };
-		D37699F223B52DCC00AE2706 /* SpinnnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnnerView.swift; sourceTree = "<group>"; };
+		D37699F223B52DCC00AE2706 /* AuthenticationSpinnnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpinnnerView.swift; sourceTree = "<group>"; };
 		D37699F423B5300900AE2706 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAssembler.swift; sourceTree = "<group>"; };
@@ -103,6 +106,9 @@
 		D3BBDA3A23CB5CE30093F9E3 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		D3BBDA3D23CB61A50093F9E3 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		D3EBE3DD23CFC33200CA923D /* ArtistDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDecorator.swift; sourceTree = "<group>"; };
+		D3FABAE523D2F6B80092196A /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		D3FABAE823D2FDA50092196A /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		D3FABAEA23D2FE990092196A /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,9 +233,10 @@
 		D338EA4D23B3EB630071E675 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				D3FABAE723D2FC8D0092196A /* Kingfisher */,
+				D3FABAE423D2F69E0092196A /* UIKit */,
 				D32B040E23B7E40500BF4EFE /* Dashboard */,
 				D37699F823B5344E00AE2706 /* Authentication */,
-				D37699F223B52DCC00AE2706 /* SpinnnerView.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -393,6 +400,7 @@
 				D37699F623B5313C00AE2706 /* AuthenticationViewModel.swift */,
 				D37699F923B5346400AE2706 /* AuthenticationAssembler.swift */,
 				D37699F423B5300900AE2706 /* WebView.swift */,
+				D37699F223B52DCC00AE2706 /* AuthenticationSpinnnerView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -410,6 +418,7 @@
 			children = (
 				D3EBE3DC23CFC32700CA923D /* Model */,
 				D3BBDA3723C923D10093F9E3 /* TopView.swift */,
+				D3FABAEA23D2FE990092196A /* TopViewModel.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -436,6 +445,22 @@
 				D3EBE3DD23CFC33200CA923D /* ArtistDecorator.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D3FABAE423D2F69E0092196A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D3FABAE523D2F6B80092196A /* SpinnerView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D3FABAE723D2FC8D0092196A /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				D3FABAE823D2FDA50092196A /* URLImage.swift */,
+			);
+			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,10 +578,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33DD77C23B3ECF400A01191 /* AuthenticationPort.swift in Sources */,
+				D3FABAE623D2F6B80092196A /* SpinnerView.swift in Sources */,
 				D338EA4A23B3EAA30071E675 /* SecureStorage.swift in Sources */,
 				D37699FA23B5346400AE2706 /* AuthenticationAssembler.swift in Sources */,
+				D3FABAEB23D2FE990092196A /* TopViewModel.swift in Sources */,
 				D33DD78C23B3F64700A01191 /* CredentialsPort.swift in Sources */,
-				D37699F323B52DCC00AE2706 /* SpinnnerView.swift in Sources */,
+				D3FABAE923D2FDA50092196A /* URLImage.swift in Sources */,
+				D37699F323B52DCC00AE2706 /* AuthenticationSpinnnerView.swift in Sources */,
 				D3BBDA3B23CB5CE30093F9E3 /* Artist.swift in Sources */,
 				D3BBDA3823C923D10093F9E3 /* TopView.swift in Sources */,
 				D3BBDA3E23CB61A50093F9E3 /* DataError.swift in Sources */,

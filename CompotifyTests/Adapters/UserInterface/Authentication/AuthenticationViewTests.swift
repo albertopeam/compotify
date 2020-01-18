@@ -13,7 +13,7 @@ import ViewInspector
 
 extension AuthenticationView: Inspectable {}
 extension WebView: Inspectable {}
-extension SpinnnerView: Inspectable {}
+extension AuthenticationSpinnnerView: Inspectable {}
 
 class AuthenticationViewTests: XCTestCase {
 
@@ -38,7 +38,7 @@ class AuthenticationViewTests: XCTestCase {
             .view(AuthenticationView.self)
             .zStack()
         let webview = try body.view(WebView.self, 0).actualView()
-        let spinner = try body.view(SpinnnerView.self, 1).actualView()
+        let spinner = try body.view(AuthenticationSpinnnerView.self, 1).actualView()
         XCTAssertNotNil(body)
         XCTAssertEqual(webview.request, viewModelMock.authRequest)
         XCTAssertTrue(spinner.isAnimating)

@@ -8,18 +8,18 @@
 
 import SwiftUI
 
-struct SpinnnerView: UIViewRepresentable {
+struct AuthenticationSpinnnerView: UIViewRepresentable {
 
     @Binding var isAnimating: Bool
     private let spinner = UIActivityIndicatorView()
 
-    func makeUIView(context: UIViewRepresentableContext<SpinnnerView>) -> UIActivityIndicatorView {
+    func makeUIView(context: UIViewRepresentableContext<AuthenticationSpinnnerView>) -> UIActivityIndicatorView {
         spinner.tintColor = .gray
         spinner.hidesWhenStopped = true
         return spinner
     }
 
-    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<SpinnnerView>) {
+    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<AuthenticationSpinnnerView>) {
         if isAnimating {
             spinner.startAnimating()
         } else {

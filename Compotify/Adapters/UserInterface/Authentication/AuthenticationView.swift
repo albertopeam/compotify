@@ -19,7 +19,7 @@ struct AuthenticationView: View {
     var body: some View {
         ZStack {
             WebView(isLoading: $isLoading, urlPublisher: viewModel.urlPublisher, request: viewModel.authRequest)
-            SpinnnerView(isAnimating: $isLoading)
+            AuthenticationSpinnnerView(isAnimating: $isLoading)
         }
     }
 }
