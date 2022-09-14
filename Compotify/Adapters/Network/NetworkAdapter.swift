@@ -44,7 +44,7 @@ class NetworkAdapter: NetworkPort {
 
     // MARK: - me/top
 
-    func myTopArtists(token: String?) -> AnyPublisher<[Artist], DataError>{
+    func myTopArtists(token: String?) -> AnyPublisher<[Artist], DataError> {
         let url = URL(string: "\(endpoint)/me/top/artists?limit=50&offset=0&time_range=short_term")!
         let request = buildRequest(for: url, accessToken: token)
         return session.dataTaskPublisher(for: request)

@@ -10,17 +10,37 @@
 //https://basememara.com/swift-dependency-injection-via-property-wrapper/
 import Foundation
 
-//TODO: acabar el injector...
-//TODO: ver si esto compensa...como voy a enganchar el viewModel y la view y el core
 class Injector {
 
-    private var types: [String: () -> Any] = .init()
+    private var dependencies: [String: () -> Any] = .init()
 
-    func register() {
-        fatalError()
+    fileprivate func register(key: String, resolver: @escaping () -> Any) {
+        dependencies[key] = resolver
     }
 
     func resolve<T>(type: T.Type) -> T {
-        fatalError()
+        let key = String(describing: type)
+        guard let candidate = dependencies.first(where: { $0.key == key }) else {
+            fatalError("Dependency for \(key) couldn't be resolved")
+        }
+        let resolver = candidate.value()
+        guard let dependency = resolver as? T else {
+            fatalError("Dependency for \(key) couldn't be casted to \(T.self)")
+        }
+        return dependency
+    }
+}
+
+class Demo {
+    //TODO: migrate to class or struct based and create a proto, the idea is to have static and non static stuff
+    here!!!
+    func run() {
+        let injector = Injector()
+        let key = String(describing: NetworkPort.self)
+        injector.register(key: key, resolver: {
+            NetworkAdapter()
+        })
+        let networkPort = injector.resolve(type: NetworkPort.self)
+        print("")
     }
 }

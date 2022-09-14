@@ -36,6 +36,7 @@ class TopViewModel: ObservableObject {
 
     func get() {
         self.state = .loading
+        //TODO: hide auth issues in TopModel or whatever...
         networkAdapter.myTopArtists(token: authPort.token)
             .map({ $0.map({ ArtistDecorator($0) }) })
             .receive(on: RunLoop.main)

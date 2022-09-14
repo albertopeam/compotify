@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Combine
 
-//TODO: maybe is not a port...SpotifyApiPort
 protocol NetworkPort {
     func authentication(_ credentials: (clientId: String, redirectUri: String)) -> URLRequest
+    func myTopArtists(token: String?) -> AnyPublisher<[Artist], DataError>
 }
